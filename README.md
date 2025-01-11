@@ -11,13 +11,12 @@ This Hybrid Driven Automation Framework was developed to automate the OpenCart e
 - **Data-Driven Testing**: Integrated Apache POI to read and write test data from Excel files, enabling dynamic, data-driven test execution for increased test coverage.
 - **Logging and Reporting**: Utilized Log4j2 for structured logging and Extent Reports to provide rich, interactive test execution reports, including screenshots of failures for better debugging.
 - **CI/CD Integration**: The framework is integrated with Jenkins to enable continuous test execution as part of the CI/CD pipeline, ensuring fast feedback during development cycles.
-- **Distributed Testing with Selenium Grid**: Enabled Selenium Grid and Docker for distributed test execution, reducing test time and enhancing environment compatibility.
 
 ## Project Structure
 
 The project follows a structured layout with Maven for dependency management. The key components include:
 
-### `src/main`: Java source code
+### `src/test`: Java source code
 - **`pageObjects`**: Contains page objects representing different pages of the OpenCart application.
   - `BasePage.java`: Common functionalities for all pages.
   - `HomePage.java`: Represents the home page of the application.
@@ -29,11 +28,10 @@ The project follows a structured layout with Maven for dependency management. Th
 - **`testBase`**: Contains base classes for common test setup.
   - `BaseClass.java`: Common setup and teardown functionalities for all tests.
 
-### `src/test`: Test-related resources
 - **`java/testCases`**: Contains the test scripts for various scenarios.
-  - `AccountRegistrationTest.java`: Test for user account registration.
-  - `LoginTest.java`: Test for user login functionality.
-  - `LoginDataDrivenTest.java`: Data-driven test for user login.
+  - `TC_001_AccountRegistrationTest.java`: Test for user account registration.
+  - `TC_002_LoginTest.java`: Test for user login functionality.
+  - `TC_003_LoginDataDrivenTest.java`: Data-driven test for user login.
     
 
 - **`resources`**: Contains configuration and logging files.
@@ -41,15 +39,15 @@ The project follows a structured layout with Maven for dependency management. Th
   - `config.properties`: Stores environment and application settings.
 
 - **`utilities`**: Contains utility classes used across the framework.
-  - `ExtentReportUtility.java`: Generates Extent reports for test execution.
+  - `ExtentReportManager.java`: Generates Extent reports for test execution.
   - `ExcelUtility.java`: Handles reading and writing data to Excel files.
   - `DataProviders.java`: Provides data for data-driven tests.
 
 - **`testData`**: Contains Excel files for test data.
-  - `TestData.xlsx`: Excel file with test data used in data-driven tests.
+  - `Opencart_LoginData.xlsx`: Excel file with test data used in data-driven tests.
 
 ### Other Configurations
-- **`testng.xml`**: Configuration file for TestNG, specifying the test suite, test cases, and groups.
+- **`master.xml`**: Configuration file for TestNG, specifying the test suite, test cases, and groups.
 - **`grouping.xml`**: TestNG configuration for grouping test cases.
 - **`pom.xml`**: Maven configuration for managing project dependencies and build lifecycle.
 - **`run.bat`**: Batch file for running tests on Windows.
@@ -63,15 +61,6 @@ This organized structure ensures clarity, modularity, and ease of maintenance wh
 - **Data-Driven Approach**: The framework supports dynamic test execution by feeding input data from Excel files. This allows easy scaling of test cases and ensures comprehensive validation across various data sets.
 - **Real-Time Test Reporting**: Extent Reports are generated with detailed logs, screenshots, and test status, providing stakeholders with clear visibility into test execution and immediate identification of issues.
 
-## Setup & Execution
-
-### Prerequisites
-- Java (JDK 8 or higher)
-- Maven (for dependency management)
-- Selenium WebDriver (for browser automation)
-- TestNG (for test execution)
-- Docker and Selenium Grid (for distributed testing)
-- Jenkins (for continuous integration)
 
 ### Installation
 1. Clone the repository:
