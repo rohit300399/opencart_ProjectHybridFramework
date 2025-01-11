@@ -21,12 +21,10 @@ The project follows a structured layout with Maven for dependency management. Th
 - **`pageObjects`**: Contains page objects representing different pages of the OpenCart application.
   - `BasePage.java`: Common functionalities for all pages.
   - `HomePage.java`: Represents the home page of the application.
-  - `RegistrationPage.java`: Represents the registration page.
+  - `AccountRegistrationPage.java`: Represents the registration page.
   - `LoginPage.java`: Represents the login page.
   - `MyAccountPage.java`: Represents the My Account page.
-  - `SearchPage.java`: Represents the search functionality page.
-  - `ShoppingCartPage.java`: Represents the shopping cart page.
-  - `CheckoutPage.java`: Represents the checkout page.
+
 
 - **`testBase`**: Contains base classes for common test setup.
   - `BaseClass.java`: Common setup and teardown functionalities for all tests.
@@ -36,9 +34,7 @@ The project follows a structured layout with Maven for dependency management. Th
   - `AccountRegistrationTest.java`: Test for user account registration.
   - `LoginTest.java`: Test for user login functionality.
   - `LoginDataDrivenTest.java`: Data-driven test for user login.
-  - `SearchProduct.java`: Test for searching products.
-  - `AddProductToCart.java`: Test for adding products to the cart.
-  - `EndToEndTest.java`: End-to-end test that covers the entire purchase process.
+    
 
 - **`resources`**: Contains configuration and logging files.
   - `log4j2.xml`: Configuration for logging via Log4j2.
