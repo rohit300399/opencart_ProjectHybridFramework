@@ -13,11 +13,52 @@ This Hybrid Driven Automation Framework was developed to automate the OpenCart e
 - **CI/CD Integration**: The framework is integrated with Jenkins to enable continuous test execution as part of the CI/CD pipeline, ensuring fast feedback during development cycles.
 - **Distributed Testing with Selenium Grid**: Enabled Selenium Grid and Docker for distributed test execution, reducing test time and enhancing environment compatibility.
 
-## Project Architecture
+## Project Structure
 
-The project follows a modular structure, separating different components based on their functionality. Below is an overview of the directory structure:
+The project follows a structured layout with Maven for dependency management. The key components include:
 
-src/ ├── main/ │ └── java/ │ ├── pageObjects/ │ │ ├── BasePage.java # Base page class for common functionalities │ │ ├── HomePage.java # Page object for the Home page │ │ └── RegistrationPage.java # Page object for the Registration page │ ├── testBase/ │ │ └── BaseClass.java # Base class for common test setup and teardown │ ├── utilities/ │ │ ├── ExcelUtility.java # Utility class for reading/writing Excel files │ │ ├── ExtentReportUtility.java # Utility for generating Extent reports │ │ └── DataProviders.java # Class for providing data for data-driven tests ├── test/ │ └── java/ │ ├── testCases/ │ │ ├── AccountRegistrationTest.java # Test for user account registration │ │ ├── LoginTest.java # Test for user login functionality │ │ └── LoginDataDrivenTest.java # Data-driven test for login functionality │ ├── resources/ │ │ ├── config.properties # Configuration file for environment settings │ │ └── log4j2.xml # Logging configuration for Log4j2
+### `src/main`: Java source code
+- **`pageObjects`**: Contains page objects representing different pages of the OpenCart application.
+  - `BasePage.java`: Common functionalities for all pages.
+  - `HomePage.java`: Represents the home page of the application.
+  - `RegistrationPage.java`: Represents the registration page.
+  - `LoginPage.java`: Represents the login page.
+  - `MyAccountPage.java`: Represents the My Account page.
+  - `SearchPage.java`: Represents the search functionality page.
+  - `ShoppingCartPage.java`: Represents the shopping cart page.
+  - `CheckoutPage.java`: Represents the checkout page.
+
+- **`testBase`**: Contains base classes for common test setup.
+  - `BaseClass.java`: Common setup and teardown functionalities for all tests.
+
+### `src/test`: Test-related resources
+- **`java/testCases`**: Contains the test scripts for various scenarios.
+  - `AccountRegistrationTest.java`: Test for user account registration.
+  - `LoginTest.java`: Test for user login functionality.
+  - `LoginDataDrivenTest.java`: Data-driven test for user login.
+  - `SearchProduct.java`: Test for searching products.
+  - `AddProductToCart.java`: Test for adding products to the cart.
+  - `EndToEndTest.java`: End-to-end test that covers the entire purchase process.
+
+- **`resources`**: Contains configuration and logging files.
+  - `log4j2.xml`: Configuration for logging via Log4j2.
+  - `config.properties`: Stores environment and application settings.
+
+- **`utilities`**: Contains utility classes used across the framework.
+  - `ExtentReportUtility.java`: Generates Extent reports for test execution.
+  - `ExcelUtility.java`: Handles reading and writing data to Excel files.
+  - `DataProviders.java`: Provides data for data-driven tests.
+
+- **`testData`**: Contains Excel files for test data.
+  - `TestData.xlsx`: Excel file with test data used in data-driven tests.
+
+### Other Configurations
+- **`testng.xml`**: Configuration file for TestNG, specifying the test suite, test cases, and groups.
+- **`grouping.xml`**: TestNG configuration for grouping test cases.
+- **`pom.xml`**: Maven configuration for managing project dependencies and build lifecycle.
+- **`run.bat`**: Batch file for running tests on Windows.
+
+This organized structure ensures clarity, modularity, and ease of maintenance while facilitating efficient test automation development and execution.
 
 ## Key Highlights
 
