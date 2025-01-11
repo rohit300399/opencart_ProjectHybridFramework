@@ -25,7 +25,8 @@ The project follows a structured layout with Maven for dependency management. Th
   - `AccountRegistrationPage.java`: Represents the registration page.
   - `LoginPage.java`: Represents the login page.
   - `MyAccountPage.java`: Represents the My Account page.
-
+  - `SearchPage.java`: Test for searching products.
+  - `ShoppingCartPage.java`: Test for adding products to the cart.
 
 - **`testBase`**: Contains base classes for common test setup.
   - `BaseClass.java`: Common setup and teardown functionalities for all tests.
@@ -34,8 +35,10 @@ The project follows a structured layout with Maven for dependency management. Th
   - `TC_001_AccountRegistrationTest.java`: Test for user account registration.
   - `TC_002_LoginTest.java`: Test for user login functionality.
   - `TC_003_LoginDataDrivenTest.java`: Data-driven test for user login.
+  - `TC_004_SearchProductTest.java`: Test for searching products.
+  - `TC_005_AddToCartPageTest.java`: Test for adding products to the cart.
+  - `TC_006_EndToEndTest.java`: End-to-end test that covers the entire purchase process.
     
-
 - **`resources`**: Contains configuration and logging files.
   - `log4j2.xml`: Configuration for logging via Log4j2.
   - `config.properties`: Stores environment and application settings.
