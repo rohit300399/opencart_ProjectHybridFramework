@@ -1,4 +1,4 @@
-![Folderstructure (1)](https://github.com/user-attachments/assets/0ce14dba-94c6-464c-b881-609787893a12)
+
 # Hybrid Driven Automation Framework for OpenCart
 
 ## Project Overview
